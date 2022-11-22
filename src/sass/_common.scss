@@ -1,6 +1,9 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
 
+body {
+    font-size: 20px;
+}
 .search-form {
     display: flex;
     justify-content: center;
