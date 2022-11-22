@@ -40,11 +40,13 @@ function getWeather(data) {
     const markup = `
     <div class="card">
         <div class="info">
-            <p class="info__item">${location}</p>
-            <p class="info__item">${weatherStatus}</p>
-            <img src="http://api.openweathermap.org/img/w/${weatherIcon}.png" alt="${weatherStatus}">
-            <p class="info__item">${temp}&deg;C</p>
-            <p class="info__item">Feels like: ${feelslike}&deg;C</p>
+            <div class="info__icon"><img src="http://api.openweathermap.org/img/w/${weatherIcon}.png" alt="${weatherStatus}" ></div>
+            <div class="info__wrapper" >
+                <p class="info__item info__item--location">${location}</p>
+                <p class="info__item info__item--temp">${temp}&deg;C</p>
+                <p class="info__item info__item--status">${weatherStatus}</p>
+                <p class="info__item">Feels like: ${feelslike}&deg;C</p>
+            </div>
         </div>
     </div>`;
     weatherBlock.insertAdjacentHTML("beforeend", markup);
